@@ -73,7 +73,12 @@
 #define AODV_RT_LOG_PATH "/var/log/aodvd.rtlog"
 #endif				/* NS_PORT */
 
-#define max(A,B) ( (A) > (B) ? (A):(B))
+#undef max(A,B) ( (A) > (B) ? (A):(B))
+/* if combine go error here, cross out the line above and add these */
+//#ifndef max
+//#define max(A,B) ( (A) > (B) ? (A):(B))
+//#endif
+
 
 #define MINTTL 1		/* min TTL in the packets sent locally */
 
